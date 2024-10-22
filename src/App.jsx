@@ -1,34 +1,36 @@
 import React, { useState } from "react";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Card from "./components/Card";
 
 const App = () => {
-  const [username, setuserName] = useState("");
-  const [num, setNum] = useState(0);
-  // const [readable, writable] = readableWritable(10)
-  const submitHandler = (e) => {
-    e.preventDefault();
-    console.log("Form Submitted");
-    console.log(username);
-    setuserName("");
-  };
+  // const [username, setuserName] = useState("");
+  // const [num, setNum] = useState(0);
+  // // const [readable, writable] = readableWritable(10)
+  // const submitHandler = (e) => {
+  //   e.preventDefault();
+  //   console.log("Form Submitted");
+  //   console.log(username);
+  //   setuserName("");
+  // };
 
-  const name = "Abbas Raza";
+  // const name = "Abbas Raza";
+
+  const user = 'Abbas Raza'
 
   return (
     // fragments
     <>
-      <nav className="bg-emerald-950 flex items-center justify-between px-10 py-5">
-        <h2 className="text-2xl">Abbas</h2>
-        <div className="flex gap-8 items-center">
-          <h4 className="text-xl">About</h4>
-          <h4 className="text-xl">Contact</h4>
-          <h4 className="text-xl">Services</h4>
-          <h4 className="text-xl">Your Account</h4>
-        </div>
-      </nav>
+      {/* <Header /> */}
+      <Navbar />
+      <Card user={user} />
+      <Card user='Abbas' />
 
 
-    
-    <div>
+
+
+    {/* <div>
       <h2 className="text-5xl bg-red-700 text-black">Hello {name}</h2>
       <h3>Number is {num}</h3>
       <button
@@ -65,6 +67,8 @@ const App = () => {
         </button>
       </form>
     </div>
+
+    <Footer/> */}
     </>
   );
 };
