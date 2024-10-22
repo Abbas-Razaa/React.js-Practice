@@ -17,20 +17,55 @@ const App = () => {
 
   // const name = "Abbas Raza";
 
-  const user = 'Abbas Raza'
+  const user = "Abbas Raza";
+
+
+
+  const userData = [
+    {
+      user: 'JohnDoe',
+      city: 'New York',
+      age: 28
+    },
+    {
+      user: 'JaneSmith',
+      city: 'Los Angeles',
+      age: 34
+    },
+    {
+      user: 'MikeJohnson',
+      city: 'Chicago',
+      age: 45
+    },
+    {
+      user: 'EmilyDavis',
+      city: 'Houston',
+      age: 23
+    },
+    {
+      user: 'ChrisBrown',
+      city: 'Phoenix',
+      age: 30
+    }
+  ];
+
 
   return (
     // fragments
     <>
       {/* <Header /> */}
       <Navbar />
-      <Card user={user} />
-      <Card user='Abbas' />
+      {/* <Card user={user} />
+      <Card user='Abbas' /> */}
+      <div className="p-10">
+        {userData.map((elem,idx) => {
+          return <Card key={idx} user={elem.user} city={elem.city} age={elem.age} />;
+        })}
 
+        {/* <Card user='Abbas' age='69' city='karachi'/> */}
+      </div>
 
-
-
-    {/* <div>
+      {/* <div>
       <h2 className="text-5xl bg-red-700 text-black">Hello {name}</h2>
       <h3>Number is {num}</h3>
       <button
