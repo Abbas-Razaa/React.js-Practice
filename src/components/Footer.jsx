@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { DataContext } from '../Context/UserContext';
 
 const Footer = () => {
+  const data = useContext(DataContext);
+
   return (
     <div className='bg-pink flex items-center justify-center'>
-      Footer
+      Footer {data.email}
     </div>
   )
 }

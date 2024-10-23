@@ -1,68 +1,27 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import About from './components/About'
+import React, { useContext } from "react";
+// import { Routes, Route } from "react-router-dom";
+// import About from "./components/About";
+import { DataContext } from "./Context/UserContext";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
-  
+
+  const data = useContext(DataContext)
   return (
     <div>
-      <Routes>
+      <h1>App {data.name}</h1>
+      <Header />
+      <Footer />
+
+      {/* <Routes>
         <Route path="/about" element={<About />} />
-      </Routes>
+      </Routes> */}
     </div>
-  )
-}
+  );
+};
 
-export default App
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default App;
 
 // import axios from "axios";
 // import React, { useEffect } from "react";
