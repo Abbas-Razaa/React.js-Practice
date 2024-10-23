@@ -1,38 +1,106 @@
-import axios from "axios";
-import React from "react";
-import { useState } from "react";
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import About from './components/About'
 
 const App = () => {
-  const [data, setData] = useState([]);
-
-  const getData = async () => {
-    const response = axios.get("https://picsum.photos/v2/list");
-    setData(response.data);
-
-    console.log(data);
-  };
+  
   return (
-    <div className="p-4">
-      <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        onClick={getData}
-      >
-        Get Data
-      </button>
-      <div className="p-5 mt-5 bg-gray-400">
-        {data.map((elem, idx) => {
-          return (
-            <div key={idx} className="p-5 bg-white rounded-lg m-5">
-              <img className='h-40' src={elem.download_url} alt="" />
-            </div>
-          );
-        })}
-      </div>
+    <div>
+      <Routes>
+        <Route path="/about" element={<About />} />
+      </Routes>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import axios from "axios";
+// import React, { useEffect } from "react";
+// import { useState } from "react";
+
+// const App = () => {
+//   const [data, setData] = useState([]);
+
+//   const getData = async () => {
+//     const response = await axios.get("https://picsum.photos/v2/list");
+//     setData(response.data);
+//   };
+
+//   useEffect(() => {
+//     getData();
+//   }, []);
+
+//   return (
+//     <div className="p-10">
+//       {/* <button
+//         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+//         onClick={getData}
+//       >
+//         Get Data
+//       </button> */}
+//       <div className="p-5 mt-5 bg-gray-400">
+//         {data.map(function(elem, idx) {
+//           return <div key={idx} className="bg-gray-50 text-black flex items-center justify-between w-full px-7 py-6 rounded mb-3">
+//             <img src={elem.download_url} alt="" className="h-32 w-32 rounded-full" />
+//             <h1>{elem.author}</h1>
+//           </div>
+//         })}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default App;
 
 // import React, { useState } from "react";
 // import Header from "./components/Header";
