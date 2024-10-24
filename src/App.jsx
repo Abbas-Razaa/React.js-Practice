@@ -6,8 +6,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 const App = () => {
-
-  const data = useContext(DataContext)
+  const data = useContext(DataContext);
   return (
     <div>
       <h1>App {data.name}</h1>

@@ -1,5 +1,5 @@
-import React from 'react'
-import NavPart2 from './NavPart2'
+import React from "react";
+import NavPart2 from "./NavPart2";
 
 const Navbar = () => {
   return (
@@ -9,7 +9,7 @@ const Navbar = () => {
       </nav>
       <NavPart2 />
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
